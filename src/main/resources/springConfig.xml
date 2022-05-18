@@ -5,7 +5,9 @@
 
     <bean id ="product" class="com.example.springCore.Product">
         <constructor-arg name="productName" value="Name" />
-<!--        this is to initiate  the constructor of the bean with default value-->
+        <!--   this is to initiate  the constructor of the bean with default value-->
+        <constructor-arg name="price" ref="price"/>
+<!--        this is to reference another parameter of type class (ref) -->
     </bean>
 
     <bean id ="price" class="com.example.springCore.Price">

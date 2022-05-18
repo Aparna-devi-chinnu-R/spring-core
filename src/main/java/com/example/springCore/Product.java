@@ -1,10 +1,9 @@
 package com.example.springCore;
 
-import java.beans.ConstructorProperties;
-
 public class Product {
 
     private String productName;
+    private Price price;
 
     public Product() {
     }
@@ -14,7 +13,10 @@ public class Product {
         this.productName = productName;
     }
 
-
+    public Product(String productName, Price price) {
+        this.productName = productName;
+        this.price = price;
+    }
 
     public void printProductName(String name, String price){
         System.out.println("The product " +name + "has a price " +price);
