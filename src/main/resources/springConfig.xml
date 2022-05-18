@@ -7,4 +7,12 @@
         <constructor-arg name="productName" value="Name" />
 <!--        this is to initiate  the constructor of the bean with default value-->
     </bean>
+
+    <bean id ="price" class="com.example.springCore.Price">
+       <property name="amount" value="123"/>
+        <property name="currencyType" value="Rupees"/>
+<!--   for setter based injection-->
+    </bean>
+
+
 </beans>
