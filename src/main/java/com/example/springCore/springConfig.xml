@@ -3,5 +3,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id ="product" class="com.example.springCore.Product"></bean>
+    <bean id ="product" class="com.example.springCore.Product">
+        <constructor-arg name="productName" value="Name" />
+<!--        this is to initiate  the constructor of the bean with default value-->
+    </bean>
 </beans>
