@@ -16,17 +16,27 @@ public class SpringCoreApplication {
 
 		// xml configuration
 		// deprecated way
-//		BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("springConfig.xml"));
-//		Product product = beanFactory.getBean("product", Product.class);
+		BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("springConfig.xml"));
+		Product product = beanFactory.getBean("product", Product.class);
 
 		//correct way , return application context , can you also use BeanFactory instead of application context
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("springConfig.xml");
 		Product product1 = applicationContext.getBean("product", Product.class);
 
-		// java configuration
+		//setter based injection
+		ApplicationContext applicationContext2 = new ClassPathXmlApplicationContext("springConfig.xml");
+		Price price = applicationContext2.getBean(Price.class);
 
-//		ApplicationContext applicationContext1  = new AnnotationConfigApplicationContext(SpringConfiguration.class);
-//		Product product2 = applicationContext1.getBean("productObj", Product.class);
+		// java configuration
+		//constructor based injection
+		ApplicationContext applicationContext1  = new AnnotationConfigApplicationContext(SpringConfiguration.class);
+		Product product2 = applicationContext1.getBean("productObj", Product.class);
+
+
+
+
+
+
 
 
 	}

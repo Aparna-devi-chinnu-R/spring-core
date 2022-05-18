@@ -20,4 +20,5 @@ public class Price {
     public void setCurrencyType(String currencyType) {
         this.currencyType = currencyType;
     }
+
 }
