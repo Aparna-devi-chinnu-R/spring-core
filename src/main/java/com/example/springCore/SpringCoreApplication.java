@@ -25,8 +25,8 @@ public class SpringCoreApplication {
 
 		// java configuration
 
-		ApplicationContext applicationContext1  = new AnnotationConfigApplicationContext(Product.class);
-		Product product2 = applicationContext1.getBean("product", Product.class);
+		ApplicationContext applicationContext1  = new AnnotationConfigApplicationContext(SpringConfiguration.class);
+		Product product2 = applicationContext1.getBean("productObj", Product.class);
 
 
 	}
