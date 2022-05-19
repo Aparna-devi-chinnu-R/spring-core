@@ -31,6 +31,10 @@ public class SpringCoreApplication {
 		ApplicationContext applicationContext3 = new ClassPathXmlApplicationContext("productConfig.xml");
 		Product product3 = applicationContext3.getBean(Product.class);
 
+		//inner bean
+		ApplicationContext applicationContext4 = new ClassPathXmlApplicationContext("innerBeanConfig.xml");
+		Product product4 = applicationContext4.getBean(Product.class);
+
 		// java configuration
 		//constructor based injection
 		ApplicationContext applicationContext1  = new AnnotationConfigApplicationContext(SpringConfiguration.class);

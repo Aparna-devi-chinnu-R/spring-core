@@ -3,4 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="product" class="com.example.springCore.Product">
+        <constructor-arg name="price">
+            <bean id="price" class="com.example.springCore.Price">
+                <property name="currencyType" value="USD"/>
+                <property name="amount" value="234"/>
+            </bean>
+        </constructor-arg>
+        <constructor-arg name="productName" value="Product"/>
+    </bean>
 </beans>
