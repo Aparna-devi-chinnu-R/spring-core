@@ -27,6 +27,10 @@ public class SpringCoreApplication {
 		ApplicationContext applicationContext2 = new ClassPathXmlApplicationContext("springConfig.xml");
 		Price price = applicationContext2.getBean(Price.class);
 
+		//different configuration file and importing it
+		ApplicationContext applicationContext3 = new ClassPathXmlApplicationContext("productConfig.xml");
+		Product product3 = applicationContext3.getBean(Product.class);
+
 		// java configuration
 		//constructor based injection
 		ApplicationContext applicationContext1  = new AnnotationConfigApplicationContext(SpringConfiguration.class);
